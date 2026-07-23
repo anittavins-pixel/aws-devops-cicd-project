@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/anittavins-pixel/aws-devops-cicd-project.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t flask-app .'
